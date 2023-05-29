@@ -4,6 +4,24 @@ public class Loja {
     private String nome;
     private int quantidadeFuncionarios;
     private int salarioBaseFuncionario;
+    private Endereco endereco;
+    private Data dataFundacao;
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
+    public Data getDataFundacao() {
+        return dataFundacao;
+    }
+
+    public void setDataFundacao(Data dataFundacao) {
+        this.dataFundacao = dataFundacao;
+    }
 
     public String getNome() {
         return nome;
@@ -29,20 +47,26 @@ public class Loja {
         this.salarioBaseFuncionario = salarioBaseFuncionario;
     }
 
-    public Loja(String nome, int quantidadeFuncionarios) {
+    public Loja(String nome, int quantidadeFuncionarios, Endereco endereco, Data dataFundacao) {
         this.nome = nome;
         this.quantidadeFuncionarios = quantidadeFuncionarios;
         this.salarioBaseFuncionario = -1;
+        this.endereco = endereco;
+        this.dataFundacao = dataFundacao;
     }
 
-    public Loja(String nome, int quantidadeFuncionarios, int salarioBaseFuncionario) {
+    public Loja(String nome, int quantidadeFuncionarios, int salarioBaseFuncionario, Endereco endereco,
+            Data dataFundacao) {
         this.nome = nome;
         this.quantidadeFuncionarios = quantidadeFuncionarios;
         this.salarioBaseFuncionario = salarioBaseFuncionario;
+        this.endereco = endereco;
+        this.dataFundacao = dataFundacao;
     }
 
     public String toString() {
-        return this.getNome() + " - " + this.getQuantidadeFuncionarios() + " - " + this.getSalarioBaseFuncionario();
+        return this.getNome() + " - " + this.getQuantidadeFuncionarios() + " - " + this.getSalarioBaseFuncionario()
+                + " - " + this.getEndereco().toString() + " - " + this.getDataFundacao().toString();
     }
 
     public int gastosComSalario() {
