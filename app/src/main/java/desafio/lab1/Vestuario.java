@@ -13,8 +13,8 @@ public class Vestuario extends Loja {
 
     public Vestuario(String nome, int quantidadeFuncionarios, int salarioBaseFuncionario, Endereco endereco,
             Data dataFundacao,
-            boolean produtosImportados) {
-        super(nome, quantidadeFuncionarios, salarioBaseFuncionario, endereco, dataFundacao);
+            boolean produtosImportados, int tamanhoDoEstoque) {
+        super(nome, quantidadeFuncionarios, salarioBaseFuncionario, endereco, dataFundacao, tamanhoDoEstoque);
         this.produtosImportados = produtosImportados;
     }
 

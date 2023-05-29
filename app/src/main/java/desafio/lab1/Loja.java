@@ -56,6 +56,16 @@ public class Loja {
         this.salarioBaseFuncionario = salarioBaseFuncionario;
     }
 
+    public Loja(String nome, int quantidadeFuncionarios, Endereco endereco,
+            Data dataFundacao, int tamanhoDoEstoque) {
+        this.nome = nome;
+        this.quantidadeFuncionarios = quantidadeFuncionarios;
+        this.salarioBaseFuncionario = -1;
+        this.endereco = endereco;
+        this.dataFundacao = dataFundacao;
+        this.estoqueProdutos = new Produto[tamanhoDoEstoque];
+    }
+
     public Loja(String nome, int quantidadeFuncionarios, int salarioBaseFuncionario, Endereco endereco,
             Data dataFundacao, int tamanhoDoEstoque) {
         this.nome = nome;
