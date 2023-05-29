@@ -3,7 +3,7 @@ package desafio.lab1;
 public class Loja {
     private String nome;
     private int quantidadeFuncionarios;
-    private int salariobaseFuncionario;
+    private int salarioBaseFuncionario;
 
     public String getNome() {
         return nome;
@@ -21,41 +21,41 @@ public class Loja {
         this.quantidadeFuncionarios = quantidadeFuncionarios;
     }
 
-    public int getSalariobaseFuncionario() {
-        return salariobaseFuncionario;
+    public int getSalarioBaseFuncionario() {
+        return salarioBaseFuncionario;
     }
 
-    public void setSalariobaseFuncionario(int salariobaseFuncionario) {
-        this.salariobaseFuncionario = salariobaseFuncionario;
+    public void setSalarioBaseFuncionario(int salarioBaseFuncionario) {
+        this.salarioBaseFuncionario = salarioBaseFuncionario;
     }
 
     public Loja(String nome, int quantidadeFuncionarios) {
         this.nome = nome;
         this.quantidadeFuncionarios = quantidadeFuncionarios;
-        this.salariobaseFuncionario = -1;
+        this.salarioBaseFuncionario = -1;
     }
 
-    public Loja(String nome, int quantidadeFuncionarios, int salariobaseFuncionario) {
+    public Loja(String nome, int quantidadeFuncionarios, int salarioBaseFuncionario) {
         this.nome = nome;
         this.quantidadeFuncionarios = quantidadeFuncionarios;
-        this.salariobaseFuncionario = salariobaseFuncionario;
+        this.salarioBaseFuncionario = salarioBaseFuncionario;
     }
 
     public String toString() {
-        return this.getNome() + " - " + this.getQuantidadeFuncionarios() + " - " + this.getSalariobaseFuncionario();
+        return this.getNome() + " - " + this.getQuantidadeFuncionarios() + " - " + this.getSalarioBaseFuncionario();
     }
 
     public int gastosComSalario() {
-        return this.quantidadeFuncionarios * this.salariobaseFuncionario;
+        return this.quantidadeFuncionarios * this.salarioBaseFuncionario;
     }
 
-    public String tamanhoDaLoja(int quantidadeFuncionarios) {
-        if (quantidadeFuncionarios <= 10) {
-            return "P";
-        } else if (quantidadeFuncionarios < 30) {
-            return "M";
+    public char tamanhoDaLoja() {
+        if (this.quantidadeFuncionarios <= 10) {
+            return 'P';
+        } else if (this.quantidadeFuncionarios < 30) {
+            return 'M';
         } else {
-            return "G";
+            return 'G';
         }
     }
 }
